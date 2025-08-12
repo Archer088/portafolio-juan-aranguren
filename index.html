@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juan Aranguren | Portafolio de Análisis de Datos</title>
+  <meta name="description" content="Portafolio centralizado: proyectos de GitHub, credenciales de DataCamp, habilidades técnicas y contacto." />
+  <meta name="author" content="Juan Aranguren" />
+  <meta property="og:title" content="Juan Aranguren | Portafolio de Análisis de Datos" />
+  <meta property="og:description" content="Proyectos, certificaciones y habilidades en Python, SQL, Power BI y Streamlit." />
+  <meta property="og:type" content="website" />
+  <!-- IMPORTANTE: coloca las imágenes en /assets del repo con estos nombres -->
+  <meta property="og:image" content="assets/eda_portada.png" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tema (claro/oscuro) persistente
+    const userPref = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if ((userPref === 'dark') || (!userPref && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+    function toggleTheme(){
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200 dark:bg-slate-900/80 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-semibold tracking-tight text-slate-900 dark:text-white">Juan Aranguren</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#proyectos" class="hover:text-sky-600">Proyectos</a>
+        <a href="#datacamp" class="hover:text-sky-600">Certificaciones</a>
+        <a href="#habilidades" class="hover:text-sky-600">Habilidades</a>
+        <a href="#contacto" class="hover:text-sky-600">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button aria-label="Cambiar tema" class="rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800" onclick="toggleTheme()">🌗</button>
+        <a href="https://github.com/Archer088" target="_blank" class="rounded-xl px-3 py-1.5 text-sm bg-sky-600 text-white hover:bg-sky-700">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-white to-white dark:from-slate-800 dark:via-slate-900 dark:to-slate-900"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Analista de Datos · Python · SQL · Power BI</h1>
+        <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed">Físico de formación y analista de datos con experiencia en limpieza, EDA y visualización. Construyo automatizaciones con Python y desarrollo dashboards en Power BI y Streamlit. Este es mi portafolio centralizado con proyectos (GitHub) y credenciales (DataCamp).</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#proyectos" class="rounded-xl px-4 py-2 bg-sky-600 text-white hover:bg-sky-700">Ver proyectos</a>
+          <a href="https://www.datacamp.com/portfolio/juanjo88arangurenl" target="_blank" class="rounded-xl px-4 py-2 ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Perfil DataCamp</a>
+          <a href="mailto:juanjo88arangurenl@gmail.com" class="rounded-xl px-4 py-2 ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Contactar</a>
+        </div>
+      </div>
+      <div>
+        <!-- Portada EDA -->
+        <img src="assets/eda_portada.png" alt="EDA con Python" class="rounded-2xl shadow-xl ring-1 ring-slate-200 dark:ring-slate-700" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-semibold">Proyectos Destacados</h2>
+      <a href="https://github.com/Archer088" target="_blank" class="text-sm text-sky-600 hover:underline">Ver todo en GitHub →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Proyecto 1: Power BI -->
+      <article class="group rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 overflow-hidden bg-white dark:bg-slate-900 hover:shadow-xl transition">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiM2UwODIzMzMtZTQ1Ni00MDYyLTg1ZjItZjkyMzRjZTA1Yzc0IiwidCI6IjIzMWMyMzg5LTRjZDktNGM1MS05M2NjLWRmNTNmNzdlZDMyNCIsImMiOjR9" target="_blank" class="block">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Dashboard de Ventas en Power BI" class="h-40 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Dashboard de Ventas Globales (Power BI)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Métricas clave, segmentación por región y tendencias. Integración con SQL y Power Query.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Power BI</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">SQL</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Power Query</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Proyecto 2: EDA Notebook -->
+      <article class="group rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 overflow-hidden bg-white dark:bg-slate-900 hover:shadow-xl transition">
+        <a href="https://github.com/Archer088/productot1_db_sakila/blob/main/03_notebooks/Analisis_base_datos_Sakila.ipynb" target="_blank" class="block">
+          <img src="assets/viz_portada.png" alt="EDA con Python" class="h-40 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">EDA – Dataset Sakila (Python)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Limpieza, análisis exploratorio y KPI cards. Reporte reproducible con notebooks.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Python</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">pandas</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">seaborn</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Proyecto 3: Automatización SQL -->
+      <article class="group rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 overflow-hidden bg-white dark:bg-slate-900 hover:shadow-xl transition">
+        <a href="https://github.com/Archer088/productot1_db_sakila/blob/main/02_sql_scripts/sql_sakila_script.py" target="_blank" class="block">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Automatización SQL con Python" class="h-40 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Automatización de Consultas SQL (Python)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Extracción de métricas, exportación a CSV y pipeline hacia Power BI.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">SQLAlchemy</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Automatización</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Power BI</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <!-- Proyecto 4: Streamlit, en fila aparte -->
+    <div class="grid md:grid-cols-1 gap-6 mt-6">
+      <article class="group rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 overflow-hidden bg-white dark:bg-slate-900 hover:shadow-xl transition">
+        <div class="block">
+          <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop" alt="Dashboard interactivo en Streamlit" class="h-40 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Dashboard Interactivo (Streamlit)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Visualización interactiva basada en CSV limpios post-EDA. Permite explorar métricas y gráficos dinámicos.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <a href="https://sakiladashboard-kew88fsna32dspctw7amef.streamlit.app" target="_blank" class="rounded-xl px-3 py-1.5 text-sm bg-sky-600 text-white hover:bg-sky-700">Ver Dashboard</a>
+              <a href="https://github.com/Archer088/productot1_db_sakila/blob/main/05_dashboard/app_dashboard.py" target="_blank" class="rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Ver código</a>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Streamlit</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">Python</span>
+              <span class="badge ring-slate-200 dark:ring-slate-700 bg-slate-50 dark:bg-slate-800">EDA</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="mt-6 text-sm text-slate-500 dark:text-slate-400">*Cada tarjeta enlaza al repositorio/notebook correspondiente en GitHub o al despliegue público. Duplica/edita las tarjetas para añadir más proyectos.</p>
+  </section>
+
+  <!-- Visualización de datos en pantalla (sección con imagen real) -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Visualización de Datos en Pantalla</h2>
+    <p class="text-slate-600 dark:text-slate-300 mb-6">Ejemplo de gráficos comparativos generados a partir del análisis de datos, presentando información clave para la toma de decisiones.</p>
+    <div class="grid md:grid-cols-1 items-center gap-10">
+      <div>
+        <!-- Portada de visualización -->
+        <img src="assets/viz_portada.png" alt="Visualización de datos en pantalla" class="rounded-2xl shadow-xl ring-1 ring-slate-200 dark:ring-slate-700" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificaciones / DataCamp -->
+  <section id="datacamp" class="bg-slate-50 dark:bg-slate-800/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Certificaciones y Formación (DataCamp)</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Haz clic para ver las credenciales oficiales.</p>
+      <ul class="mt-6 grid md:grid-cols-2 gap-4">
+        <li class="rounded-xl p-4 ring-1 ring-slate-200 dark:ring-slate-700 bg-white dark:bg-slate-900">
+          <a href="https://www.datacamp.com/statement-of-accomplishment/track/bbdbf756e98c30fcd30ff28aefc356289064f4d1?raw=1" target="_blank" class="font-medium hover:underline">Data Scientist with Python – Certificado</a>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Track completo: pandas, visualización, estadísticas y proyectos.</p>
+          <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/bbdbf756e98c30fcd30ff28aefc356289064f4d1" target="_blank" class="text-xs text-sky-600 hover:underline mt-1 inline-block">Ver track completado →</a>
+        </li>
+        <li class="rounded-xl p-4 ring-1 ring-slate-200 dark:ring-slate-700 bg-white dark:bg-slate-900">
+          <a href="https://www.datacamp.com/portfolio/juanjo88arangurenl" target="_blank" class="font-medium hover:underline">Perfil DataCamp</a>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Proyectos, badges y trayectoria de aprendizaje.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-semibold">Habilidades Técnicas</h2>
+    <div class="mt-6 flex flex-wrap gap-2">
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Python</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">SQL</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Pandas</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Matplotlib</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Seaborn</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Altair</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Power BI</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Power Query</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">DAX</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Streamlit</span>
+      <span class="badge bg-slate-50 dark:bg-slate-800 ring-slate-200 dark:ring-slate-700">Git</span>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-slate-50 dark:bg-slate-800/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Contacto</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">¿Colaboramos? Escríbeme y te respondo pronto.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="mailto:juanjo88arangurenl@gmail.com" class="rounded-xl px-4 py-2 bg-sky-600 text-white hover:bg-sky-700">📧 Email</a>
+        <a href="https://www.linkedin.com/in/juanarangurenleiva/" target="_blank" class="rounded-xl px-4 py-2 ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+        <a href="https://github.com/Archer088" target="_blank" class="rounded-xl px-4 py-2 ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-500 dark:text-slate-400">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+      <p>© <span id="year"></span> Juan Aranguren. Todos los derechos reservados.</p>
+      <a class="hover:underline" href="#">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan Aranguren",
+    "jobTitle": "Analista de Datos",
+    "url": "https://Archer088.github.io/",
+    "sameAs": [
+      "https://github.com/Archer088",
+      "https://www.datacamp.com/portfolio/juanjo88arangurenl",
+      "https://www.linkedin.com/in/juanarangurenleiva/"
+    ]
+  }
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
